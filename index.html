@@ -18,6 +18,12 @@
     <meta property="og:image:width" content="1080">
     <meta property="og:image:height" content="1920">
 
+    <!-- Meta tags adicionales para asegurar la miniatura en WhatsApp, iMessage y Meta -->
+    <meta itemprop="name" content="Mis xv años Angeli Elizabeth ❤️">
+    <meta itemprop="description" content="Te invito a celebrar mis XV Años. Haz clic para ver los detalles de este gran día.">
+    <meta itemprop="image" content="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth.jpg">
+    <link rel="image_src" href="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth.jpg">
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mis xv años Angeli Elizabeth ❤️">
@@ -136,17 +142,6 @@
 
     <canvas id="sparkleCanvas"></canvas>
 
-    <!-- FLOATING SIDE / BOTTOM PAGINATION DOTS -->
-    <div class="fixed right-3 top-1/2 -translate-y-1/2 z-40 flex flex-col space-y-3 bg-black/60 p-2 rounded-full border border-red-600/40 backdrop-blur-md shadow-2xl">
-        <button onclick="scrollToPage(1)" class="dot-nav w-3 h-3 rounded-full bg-red-600 transition-all scale-125 shadow-glow" title="Página 1" data-page="1"></button>
-        <button onclick="scrollToPage(2)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 2" data-page="2"></button>
-        <button onclick="scrollToPage(3)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 3" data-page="3"></button>
-        <button onclick="scrollToPage(4)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 4" data-page="4"></button>
-        <button onclick="scrollToPage(5)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 5" data-page="5"></button>
-        <button onclick="scrollToPage(6)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 6" data-page="6"></button>
-        <button onclick="scrollToPage(7)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 7" data-page="7"></button>
-    </div>
-
     <!-- FULL SCREEN SNAP SCROLL CONTAINER -->
     <main id="snapContainer" class="snap-container">
 
@@ -176,31 +171,31 @@
             />
 
             <!-- REPRODUCTOR DE MÚSICA EN PÁGINA 2 (SIN FONDO) -->
-            <div class="absolute top-[18%] left-1/2 -translate-x-1/2 z-30 w-11/12 max-w-sm flex flex-col items-center justify-center space-y-3 text-red-100 text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+            <div class="absolute top-[18%] left-1/2 -translate-x-1/2 z-30 w-11/12 max-w-sm flex flex-col items-center justify-center space-y-3 text-[#780c15] text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                 <!-- Frase descriptiva -->
-                <p class="text-xs sm:text-sm font-serif font-semibold text-red-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] animate-pulse tracking-wide">
-                    <i class="fa-solid fa-music text-red-400 mr-1.5"></i> Dale clic para escuchar mi canción 🎵
+                <p class="text-xs sm:text-sm font-serif font-semibold text-[#780c15] drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)] animate-pulse tracking-wide">
+                    <i class="fa-solid fa-music text-[#780c15] mr-1.5"></i> Dale clic para escuchar mi canción 🎵
                 </p>
 
-                <div class="flex items-center justify-center space-x-3 bg-black/30 px-4 py-2 rounded-full border border-red-500/30 backdrop-blur-xs">
-                    <button id="p2PlayBtn" onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-gradient-to-r from-red-600 to-red-800 hover:scale-105 active:scale-95 transition-transform flex items-center justify-center text-white shadow-2xl text-lg flex-shrink-0 glow-btn border border-red-400/50">
+                <div class="flex items-center justify-center space-x-3 bg-black/30 px-4 py-2 rounded-full border border-[#780c15]/40 backdrop-blur-xs">
+                    <button id="p2PlayBtn" onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-[#780c15] hover:bg-[#5a0910] hover:scale-105 active:scale-95 transition-transform flex items-center justify-center text-white shadow-2xl text-lg flex-shrink-0 glow-btn border border-red-400/30">
                         <i id="p2PlayIcon" class="fa-solid fa-play ml-0.5"></i>
                     </button>
                     
                     <div class="text-left overflow-hidden pr-2">
-                        <h4 class="font-serif text-xs font-semibold truncate text-red-200 drop-shadow-md">Vals de XV Años</h4>
+                        <h4 class="font-serif text-xs font-semibold truncate text-[#780c15] drop-shadow-sm">Fifteen - Taylor Swift</h4>
                         <div id="equalizer" class="flex items-end space-x-1 h-3 mt-1 opacity-50">
-                            <div class="w-1 bg-red-500 rounded-full h-2 animate-pulse"></div>
-                            <div class="w-1 bg-red-600 rounded-full h-3 animate-pulse"></div>
-                            <div class="w-1 bg-red-400 rounded-full h-1 animate-pulse"></div>
-                            <div class="w-1 bg-red-500 rounded-full h-2 animate-pulse"></div>
+                            <div class="w-1 bg-[#780c15] rounded-full h-2 animate-pulse"></div>
+                            <div class="w-1 bg-[#780c15] rounded-full h-3 animate-pulse"></div>
+                            <div class="w-1 bg-[#780c15] rounded-full h-1 animate-pulse"></div>
+                            <div class="w-1 bg-[#780c15] rounded-full h-2 animate-pulse"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Barra de progreso flotante ligera -->
-                <div class="w-3/4 max-w-[220px] bg-black/60 h-1.5 rounded-full overflow-hidden cursor-pointer border border-red-500/30" onclick="toggleAudio()">
-                    <div id="audioProgressBar" class="bg-gradient-to-r from-red-600 to-red-400 h-full w-0 transition-all duration-300 shadow-glow"></div>
+                <div class="w-3/4 max-w-[220px] bg-black/60 h-1.5 rounded-full overflow-hidden cursor-pointer border border-[#780c15]/40" onclick="toggleAudio()">
+                    <div id="audioProgressBar" class="bg-[#780c15] h-full w-0 transition-all duration-300 shadow-glow"></div>
                 </div>
             </div>
         </section>
@@ -224,17 +219,17 @@
                 class="full-page-img"
             />
             
-            <!-- BOTÓN DE UBICACIÓN A LA MITAD DE LA PÁGINA 4 -->
-            <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-30 w-11/12 max-w-xs">
-                <button onclick="openLocation('ceremonia')" class="w-full py-3.5 px-4 rounded-xl text-white border border-red-500/40 font-serif font-semibold text-xs sm:text-sm shadow-2xl flex items-center justify-center space-x-2 backdrop-blur-md glow-btn transition-all bg-[#780c15] hover:bg-[#5a0910]">
+            <!-- BOTÓN DE UBICACIÓN A LA MITAD DE LA PÁGINA 4 (TAMAÑO REDUCIDO UN 5%) -->
+            <div class="absolute top-[46.5%] -translate-y-1/2 left-1/2 -translate-x-1/2 z-30 w-10/12 max-w-[247px]">
+                <button onclick="openLocation('ceremonia')" class="w-full py-3 px-3.5 rounded-xl text-white border border-red-500/40 font-serif font-semibold text-xs sm:text-sm shadow-2xl flex items-center justify-center space-x-2 backdrop-blur-md glow-btn transition-all bg-[#780c15] hover:bg-[#5a0910]">
                     <i class="fa-solid fa-location-dot text-base text-red-200"></i>
                     <span>Ver Ubicación</span>
                 </button>
             </div>
 
-            <!-- BOTÓN DE UBICACIÓN AL FINAL DE LA PÁGINA 4 -->
-            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 w-11/12 max-w-xs">
-                <button onclick="openLocation('recepcion')" class="w-full py-3.5 px-4 rounded-xl text-white border border-red-500/40 font-serif font-semibold text-xs sm:text-sm shadow-2xl flex items-center justify-center space-x-2 backdrop-blur-md glow-btn transition-all bg-[#780c15] hover:bg-[#5a0910]">
+            <!-- BOTÓN DE UBICACIÓN AL FINAL DE LA PÁGINA 4 (TAMAÑO REDUCIDO UN 5%) -->
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 w-10/12 max-w-[247px]">
+                <button onclick="openLocation('recepcion')" class="w-full py-3 px-3.5 rounded-xl text-white border border-red-500/40 font-serif font-semibold text-xs sm:text-sm shadow-2xl flex items-center justify-center space-x-2 backdrop-blur-md glow-btn transition-all bg-[#780c15] hover:bg-[#5a0910]">
                     <i class="fa-solid fa-map-location-dot text-base text-red-200"></i>
                     <span>Ver Ubicación</span>
                 </button>
@@ -250,39 +245,46 @@
                 class="full-page-img"
             />
 
-            <!-- FORMULARIO DE CONFIRMACIÓN DE ASISTENCIA EN PÁGINA 5 (ENVÍA A WHATSAPP 4448506173) -->
-            <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-30 w-11/12 max-w-sm bg-black/85 backdrop-blur-md border border-red-600/60 rounded-2xl p-5 shadow-2xl text-white">
-                <div class="text-center mb-4">
-                    <i class="fa-solid fa-envelope-open-text text-2xl text-red-500 mb-1"></i>
-                    <h3 class="font-serif text-lg text-red-400 font-bold uppercase tracking-wider">Confirmar Asistencia</h3>
-                    <p class="text-[11px] text-zinc-300 font-sans">Favor de confirmar tu presencia para este día tan especial</p>
+            <!-- FORMULARIO DE CONFIRMACIÓN POR PASOS EN PÁGINA 5 -->
+            <div class="absolute top-[70%] -translate-y-1/2 left-1/2 -translate-x-1/2 z-30 w-11/12 max-w-sm p-3 text-white">
+                <div class="text-center mb-3">
+                    <i class="fa-solid fa-envelope-open-text text-2xl text-red-500 mb-1 drop-shadow-md"></i>
+                    <h3 class="font-serif text-lg text-red-400 font-bold uppercase tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">Confirmar Asistencia</h3>
                 </div>
 
                 <form id="page5RsvpForm" onsubmit="handlePage5RsvpSubmit(event)" class="space-y-3">
-                    <div>
-                        <label class="block text-[11px] font-serif uppercase tracking-wider text-red-300 mb-1">Nombre Completo</label>
-                        <input type="text" id="p5-name" required placeholder="Tu nombre y apellido" class="w-full bg-zinc-900/90 border border-red-500/40 rounded-lg px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-red-500">
+                    <!-- PASO 1: NOMBRE COMPLETO -->
+                    <div id="rsvp-step-1" class="space-y-3">
+                        <div>
+                            <label class="block text-[11px] font-serif uppercase tracking-wider text-red-300 mb-1">Paso 1: Tu Nombre Completo</label>
+                            <input type="text" id="p5-name" placeholder="Escribe tu nombre y apellido" class="w-full bg-zinc-900/90 border border-red-500/40 rounded-lg px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-red-500">
+                        </div>
+                        <button type="button" onclick="nextRsvpStep()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-red-700 to-red-600 hover:from-red-600 hover:to-red-500 text-white font-serif font-bold text-xs shadow-lg transition-all flex items-center justify-center space-x-2">
+                            <span>Siguiente Paso</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
                     </div>
 
-                    <div>
-                        <label class="block text-[11px] font-serif uppercase tracking-wider text-red-300 mb-1">Número de Acompañantes</label>
-                        <select id="p5-guests" class="w-full bg-zinc-900/90 border border-red-500/40 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-red-500">
-                            <option value="1 persona">Solo yo (1 persona)</option>
-                            <option value="2 personas">2 personas</option>
-                            <option value="3 personas">3 personas</option>
-                            <option value="Familia (4+ personas)">Familia (4+ personas)</option>
-                        </select>
-                    </div>
+                    <!-- PASO 2: ASISTENCIA -->
+                    <div id="rsvp-step-2" class="space-y-3 hidden">
+                        <div>
+                            <label class="block text-[11px] font-serif uppercase tracking-wider text-red-300 mb-1">Paso 2: ¿Asistirás al evento?</label>
+                            <select id="p5-attendance" class="w-full bg-zinc-900/90 border border-red-500/40 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-red-500">
+                                <option value="si">¡Sí, ahí estaré con mucho gusto!</option>
+                                <option value="no">Lo siento, no podré asistir</option>
+                            </select>
+                        </div>
 
-                    <div>
-                        <label class="block text-[11px] font-serif uppercase tracking-wider text-red-300 mb-1">Mensaje para Angeli</label>
-                        <textarea id="p5-msg" rows="2" placeholder="Escribe unas palabras de felicitación..." class="w-full bg-zinc-900/90 border border-red-500/40 rounded-lg px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-red-500"></textarea>
+                        <div class="flex space-x-2 pt-1">
+                            <button type="button" onclick="prevRsvpStep()" class="w-1/3 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 font-serif font-semibold text-xs transition-all">
+                                <i class="fa-solid fa-arrow-left mr-1"></i> Volver
+                            </button>
+                            <button type="submit" class="w-2/3 py-2.5 rounded-xl bg-gradient-to-r from-red-700 to-red-600 hover:from-red-600 hover:to-red-500 text-white font-serif font-bold text-xs shadow-lg transition-all flex items-center justify-center space-x-2 glow-btn">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Enviar Confirmación</span>
+                            </button>
+                        </div>
                     </div>
-
-                    <button type="submit" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-red-700 to-red-600 hover:from-red-600 hover:to-red-500 text-white font-serif font-bold text-xs shadow-lg transition-all flex items-center justify-center space-x-2 glow-btn">
-                        <i class="fa-brands fa-whatsapp text-sm"></i>
-                        <span>Confirmar por WhatsApp</span>
-                    </button>
                 </form>
             </div>
         </section>
@@ -306,31 +308,30 @@
                 class="full-page-img"
             />
 
-            <!-- CUENTA REGRESIVA EN LA ÚLTIMA PÁGINA (BAJADA UN 8% MÁS AL 26%) -->
-            <div class="absolute top-[26%] left-1/2 -translate-x-1/2 z-30 w-full max-w-sm px-4 text-center pointer-events-none">
-                <p class="font-serif text-xs sm:text-sm uppercase tracking-widest text-red-500 font-semibold mb-3 drop-shadow-md">Faltan</p>
+            <!-- CUENTA REGRESIVA EN LA ÚLTIMA PÁGINA (BAJADA UN 2% AL 33%) -->
+            <div class="absolute top-[33%] left-1/2 -translate-x-1/2 z-30 w-full max-w-sm px-4 text-center pointer-events-none">
                 <div class="grid grid-cols-4 gap-2 sm:gap-4 text-red-600 font-serif font-bold">
                     <div class="flex flex-col items-center">
                         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-red-600/80 bg-black/60 backdrop-blur-sm flex items-center justify-center shadow-lg mb-1">
-                            <span id="timer-days" class="text-xl sm:text-2xl text-red-500 font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">00</span>
+                            <span id="timer-days" class="text-xl sm:text-2xl text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">00</span>
                         </div>
                         <span class="text-[10px] text-red-400 font-sans uppercase tracking-wider font-semibold">Días</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-red-600/80 bg-black/60 backdrop-blur-sm flex items-center justify-center shadow-lg mb-1">
-                            <span id="timer-hours" class="text-xl sm:text-2xl text-red-500 font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">00</span>
+                            <span id="timer-hours" class="text-xl sm:text-2xl text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">00</span>
                         </div>
                         <span class="text-[10px] text-red-400 font-sans uppercase tracking-wider font-semibold">Horas</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-red-600/80 bg-black/60 backdrop-blur-sm flex items-center justify-center shadow-lg mb-1">
-                            <span id="timer-minutes" class="text-xl sm:text-2xl text-red-500 font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">00</span>
+                            <span id="timer-minutes" class="text-xl sm:text-2xl text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">00</span>
                         </div>
                         <span class="text-[10px] text-red-400 font-sans uppercase tracking-wider font-semibold">Min</span>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-red-600/80 bg-black/60 backdrop-blur-sm flex items-center justify-center shadow-lg mb-1">
-                            <span id="timer-seconds" class="text-xl sm:text-2xl text-red-500 font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">00</span>
+                            <span id="timer-seconds" class="text-xl sm:text-2xl text-white font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">00</span>
                         </div>
                         <span class="text-[10px] text-red-400 font-sans uppercase tracking-wider font-semibold">Seg</span>
                     </div>
@@ -409,11 +410,62 @@
         let progressInterval = null;
         let currentProgress = 0;
 
+        // Reproductor de Audio Principal con la canción seleccionada
+        const bgAudio = new Audio('https://raw.githubusercontent.com/regina1503/XIMENA-MIS-XV-A-OS-/main/Taylor%20Swift%20-%20Fifteen.mp3');
+        bgAudio.loop = true;
+
         window.onload = function() {
             initSparkles();
             setupIntersectionObserver();
             initCountdown();
         };
+
+        // Navegación por pasos en el formulario RSVP de la página 5
+        function nextRsvpStep() {
+            const nameInput = document.getElementById('p5-name');
+            if (!nameInput.value.trim()) {
+                showToast("Por favor, escribe tu nombre primero");
+                return;
+            }
+            document.getElementById('rsvp-step-1').classList.add('hidden');
+            document.getElementById('rsvp-step-2').classList.remove('hidden');
+        }
+
+        function prevRsvpStep() {
+            document.getElementById('rsvp-step-2').classList.add('hidden');
+            document.getElementById('rsvp-step-1').classList.remove('hidden');
+        }
+
+        function toggleGuestSelect() {
+            const attendance = document.getElementById('p5-attendance').value;
+            const guestContainer = document.getElementById('p5-guests-container');
+            if (attendance === 'no') {
+                guestContainer.classList.add('hidden');
+            } else {
+                guestContainer.classList.remove('hidden');
+            }
+        }
+
+        // Envío del formulario paso a paso a WhatsApp 4448506173
+        function handlePage5RsvpSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('p5-name').value.trim();
+            const attendance = document.getElementById('p5-attendance').value;
+
+            let whatsappText = "";
+            if (attendance === "si") {
+                whatsappText = `¡Hola Angeli Elizabeth! Confirmo mi asistencia a tus XV Años. ✨\n\n*Nombre:* ${name}\n*¿Asistiré?:* Sí, ¡ahí estaré!`;
+            } else {
+                whatsappText = `¡Hola Angeli Elizabeth! Muchas gracias por la invitación a tus XV Años. ❤️\n\n*Nombre:* ${name}\n*Asistencia:* Lamentablemente no podré asistir, ¡te deseo lo mejor en tu gran día!`;
+            }
+
+            const encoded = encodeURIComponent(whatsappText);
+            
+            showToast("Redirigiendo a WhatsApp...");
+            setTimeout(() => {
+                window.open(`https://wa.me/524448506173?text=${encoded}`, '_blank');
+            }, 500);
+        }
 
         // Scroll smooth to specific page section
         function scrollToPage(pageNum) {
@@ -502,9 +554,8 @@
             e.preventDefault();
             const name = document.getElementById('p5-name').value;
             const guests = document.getElementById('p5-guests').value;
-            const message = document.getElementById('p5-msg').value;
 
-            const whatsappText = `¡Hola Angeli Elizabeth! Confirmo mi asistencia a tus XV Años.\n\n*Nombre:* ${name}\n*Acompañantes:* ${guests}\n*Mensaje:* ${message || '¡Muchas felicidades!'}`;
+            const whatsappText = `¡Hola Angeli Elizabeth! Confirmo mi asistencia a tus XV Años.\n\n*Nombre:* ${name}\n*Acompañantes:* ${guests}`;
             const encoded = encodeURIComponent(whatsappText);
             
             showToast("Redirigiendo a WhatsApp...");
@@ -540,8 +591,11 @@
 
         // Función para abrir la ubicación en Google Maps
         function openLocation(type) {
-            // Abre enlace a Google Maps
-            window.open('https://maps.google.com/', '_blank');
+            if (type === 'ceremonia') {
+                window.open('https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n%20de%20eventos%20%E2%80%9CMilo%E2%80%9D%20Av.%20del%20Sauce%201800%2C%20Sin%20Nombre%2C%2078117%20San%20Luis%20Potos%C3%AD%2C%20S.L.P.', '_blank');
+            } else {
+                window.open('https://www.google.com/maps/search/?api=1&query=C.+4+S%2FN%2C+Industrial+Aviacion+1ra+Secc%2C+78140+San+Luis+Potos%C3%AD%2C+S.L.P.', '_blank');
+            }
         }
 
         // Copy Link function
@@ -576,6 +630,7 @@
 
             if (isPlayingAudio) {
                 isPlayingAudio = false;
+                bgAudio.pause();
                 if (audioContext) audioContext.suspend();
                 if (playIcon) playIcon.className = "fa-solid fa-play ml-0.5";
                 if (equalizer) equalizer.classList.add('opacity-50');
@@ -583,21 +638,32 @@
                 showToast("Música pausada");
             } else {
                 isPlayingAudio = true;
-                playWaltzSynthesizer();
+                bgAudio.play().catch(err => {
+                    console.log("Play error, falling back to synthesizer:", err);
+                    playWaltzSynthesizer();
+                });
                 if (playIcon) playIcon.className = "fa-solid fa-pause";
                 if (equalizer) equalizer.classList.remove('opacity-50');
                 startProgressBar();
-                showToast("Reproduciendo Vals ✨");
+                showToast("Reproduciendo Fifteen ✨");
             }
         }
 
         function startProgressBar() {
             clearInterval(progressInterval);
             const progressBar = document.getElementById('audioProgressBar');
+            
+            // Sincronización del progreso real si está sonando el archivo MP3
             progressInterval = setInterval(() => {
                 if (!isPlayingAudio) return;
-                currentProgress += 1;
-                if (currentProgress > 100) currentProgress = 0;
+                
+                if (bgAudio.duration) {
+                    currentProgress = (bgAudio.currentTime / bgAudio.duration) * 100;
+                } else {
+                    currentProgress += 1;
+                    if (currentProgress > 100) currentProgress = 0;
+                }
+                
                 if (progressBar) progressBar.style.width = currentProgress + '%';
             }, 300);
         }
