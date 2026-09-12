@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full w-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mis xv años Angeli Elizabeth ❤️</title>
+
+    <!-- Open Graph & Meta Tags para compartir en WhatsApp y Redes Sociales -->
+    <meta name="title" content="Mis xv años Angeli Elizabeth ❤️">
+    <meta name="description" content="Te invito a celebrar mis XV Años. Haz clic para ver los detalles de este gran día.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mis xv años Angeli Elizabeth ❤️">
+    <meta property="og:description" content="Te invito a celebrar mis XV Años. Haz clic para ver los detalles de este gran día.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth.jpg">
+    <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="1920">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mis xv años Angeli Elizabeth ❤️">
+    <meta name="twitter:description" content="Te invito a celebrar mis XV Años. Haz clic para ver los detalles de este gran día.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        roseGold: '#B76E79',
+                        softPink: '#FBE8E9',
+                        dustyRose: '#D8A7B1',
+                        goldAccent: '#D4AF37',
+                        champagne: '#F7E7CE',
+                        deepRose: '#8C3A49'
+                    },
+                    fontFamily: {
+                        cursive: ['"Great Vibes"', 'cursive'],
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #0d070a;
+            color: #f7e7ce;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Fullscreen Snap Scroll Container */
+        .snap-container {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+            width: 100vw;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .snap-section {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Main Fullscreen Background Image */
+        .full-page-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            user-select: none;
+            -webkit-user-drag: none;
+            z-index: 5;
+        }
+
+        /* Sparkle canvas background overlay */
+        #sparkleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        /* Custom scrollbar hiding */
+        .snap-container::-webkit-scrollbar {
+            display: none;
+        }
+        .snap-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Glowing animation for call-to-action buttons */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 15px rgba(220, 38, 38, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(239, 68, 68, 0.9); }
+        }
+
+        .glow-btn {
+            animation: pulseGlow 3s infinite;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-red-600 selection:text-white">
+
+    <canvas id="sparkleCanvas"></canvas>
+
+    <!-- FLOATING SIDE / BOTTOM PAGINATION DOTS -->
+    <div class="fixed right-3 top-1/2 -translate-y-1/2 z-40 flex flex-col space-y-3 bg-black/60 p-2 rounded-full border border-red-600/40 backdrop-blur-md shadow-2xl">
+        <button onclick="scrollToPage(1)" class="dot-nav w-3 h-3 rounded-full bg-red-600 transition-all scale-125 shadow-glow" title="Página 1" data-page="1"></button>
+        <button onclick="scrollToPage(2)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 2" data-page="2"></button>
+        <button onclick="scrollToPage(3)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 3" data-page="3"></button>
+        <button onclick="scrollToPage(4)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 4" data-page="4"></button>
+        <button onclick="scrollToPage(5)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 5" data-page="5"></button>
+        <button onclick="scrollToPage(6)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 6" data-page="6"></button>
+        <button onclick="scrollToPage(7)" class="dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all" title="Página 7" data-page="7"></button>
+    </div>
+
+    <!-- FULL SCREEN SNAP SCROLL CONTAINER -->
+    <main id="snapContainer" class="snap-container">
+
+        <!-- PAGE 1 SECTION -->
+        <section id="section-1" class="snap-section" data-page-num="1">
+            <img 
+                src="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth.jpg" 
+                onerror="this.onerror=null; this.src='https://github.com/regina1503/MIS-XV-ANGELI-ELIZABETH/raw/main/Angeli%20Elizabeth.jpg';"
+                alt="Página 1 - Mis XV Angeli Elizabeth" 
+                class="full-page-img"
+            />
+
+            <!-- Scroll down indicator hint -->
+            <div class="absolute bottom-6 z-30 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none opacity-90 animate-bounce">
+                <span class="text-[11px] font-serif uppercase tracking-widest text-red-500 bg-black/60 px-3 py-1 rounded-full border border-red-600/40 mb-1 backdrop-blur-sm">Desliza para ver más</span>
+                <i class="fa-solid fa-chevron-down text-red-500 text-base drop-shadow-md"></i>
+            </div>
+        </section>
+
+        <!-- PAGE 2 SECTION -->
+        <section id="section-2" class="snap-section" data-page-num="2">
+            <img 
+                src="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth%20(1).jpg" 
+                onerror="this.onerror=null; this.src='https://github.com/regina1503/MIS-XV-ANGELI-ELIZABETH/raw/main/Angeli%20Elizabeth%20(1).jpg';"
+                alt="Página 2 - Mis XV Angeli Elizabeth" 
+                class="full-page-img"
+            />
+
+            <!-- REPRODUCTOR DE MÚSICA EN PÁGINA 2 (SIN FONDO) -->
+            <div class="absolute top-[18%] left-1/2 -translate-x-1/2 z-30 w-11/12 max-w-sm flex flex-col items-center justify-center space-y-3 text-red-100 text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+                <!-- Frase descriptiva -->
+                <p class="text-xs sm:text-sm font-serif font-semibold text-red-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.95)] animate-pulse tracking-wide">
+                    <i class="fa-solid fa-music text-red-400 mr-1.5"></i> Dale clic para escuchar mi canción 🎵
+                </p>
+
+                <div class="flex items-center justify-center space-x-3 bg-black/30 px-4 py-2 rounded-full border border-red-500/30 backdrop-blur-xs">
+                    <button id="p2PlayBtn" onclick="toggleAudio()" class="w-12 h-12 rounded-full bg-gradient-to-r from-red-600 to-red-800 hover:scale-105 active:scale-95 transition-transform flex items-center justify-center text-white shadow-2xl text-lg flex-shrink-0 glow-btn border border-red-400/50">
+                        <i id="p2PlayIcon" class="fa-solid fa-play ml-0.5"></i>
+                    </button>
+                    
+                    <div class="text-left overflow-hidden pr-2">
+                        <h4 class="font-serif text-xs font-semibold truncate text-red-200 drop-shadow-md">Vals de XV Años</h4>
+                        <div id="equalizer" class="flex items-end space-x-1 h-3 mt-1 opacity-50">
+                            <div class="w-1 bg-red-500 rounded-full h-2 animate-pulse"></div>
+                            <div class="w-1 bg-red-600 rounded-full h-3 animate-pulse"></div>
+                            <div class="w-1 bg-red-400 rounded-full h-1 animate-pulse"></div>
+                            <div class="w-1 bg-red-500 rounded-full h-2 animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barra de progreso flotante ligera -->
+                <div class="w-3/4 max-w-[220px] bg-black/60 h-1.5 rounded-full overflow-hidden cursor-pointer border border-red-500/30" onclick="toggleAudio()">
+                    <div id="audioProgressBar" class="bg-gradient-to-r from-red-600 to-red-400 h-full w-0 transition-all duration-300 shadow-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3 SECTION -->
+        <section id="section-3" class="snap-section" data-page-num="3">
+            <img 
+                src="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth%20(5).jpg" 
+                onerror="this.onerror=null; this.src='https://github.com/regina1503/MIS-XV-ANGELI-ELIZABETH/raw/main/Angeli%20Elizabeth%20(5).jpg';"
+                alt="Página 3 - Mis XV Angeli Elizabeth" 
+                class="full-page-img"
+            />
+        </section>
+
+        <!-- PAGE 4 SECTION -->
+        <section id="section-4" class="snap-section" data-page-num="4">
+            <img 
+                src="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth%20(6).jpg" 
+                onerror="this.onerror=null; this.src='https://github.com/regina1503/MIS-XV-ANGELI-ELIZABETH/raw/main/Angeli%20Elizabeth%20(6).jpg';"
+                alt="Página 4 - Mis XV Angeli Elizabeth" 
+                class="full-page-img"
+            />
+            
+            <!-- BOTÓN DE UBICACIÓN A LA MITAD DE LA PÁGINA 4 -->
+            <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-30 w-11/12 max-w-xs">
+                <button onclick="openLocation('ceremonia')" class="w-full py-3.5 px-4 rounded-xl text-white border border-red-500/40 font-serif font-semibold text-xs sm:text-sm shadow-2xl flex items-center justify-center space-x-2 backdrop-blur-md glow-btn transition-all bg-[#780c15] hover:bg-[#5a0910]">
+                    <i class="fa-solid fa-location-dot text-base text-red-200"></i>
+                    <span>Ver Ubicación</span>
+                </button>
+            </div>
+
+            <!-- BOTÓN DE UBICACIÓN AL FINAL DE LA PÁGINA 4 -->
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 w-11/12 max-w-xs">
+                <button onclick="openLocation('recepcion')" class="w-full py-3.5 px-4 rounded-xl text-white border border-red-500/40 font-serif font-semibold text-xs sm:text-sm shadow-2xl flex items-center justify-center space-x-2 backdrop-blur-md glow-btn transition-all bg-[#780c15] hover:bg-[#5a0910]">
+                    <i class="fa-solid fa-map-location-dot text-base text-red-200"></i>
+                    <span>Ver Ubicación</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- PAGE 5 SECTION -->
+        <section id="section-5" class="snap-section" data-page-num="5">
+            <img 
+                src="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth%20(8).jpg" 
+                onerror="this.onerror=null; this.src='https://github.com/regina1503/MIS-XV-ANGELI-ELIZABETH/raw/main/Angeli%20Elizabeth%20(8).jpg';"
+                alt="Página 5 - Mis XV Angeli Elizabeth" 
+                class="full-page-img"
+            />
+
+            <!-- FORMULARIO DE CONFIRMACIÓN DE ASISTENCIA EN PÁGINA 5 (ENVÍA A WHATSAPP 4448506173) -->
+            <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-30 w-11/12 max-w-sm bg-black/85 backdrop-blur-md border border-red-600/60 rounded-2xl p-5 shadow-2xl text-white">
+                <div class="text-center mb-4">
+                    <i class="fa-solid fa-envelope-open-text text-2xl text-red-500 mb-1"></i>
+                    <h3 class="font-serif text-lg text-red-400 font-bold uppercase tracking-wider">Confirmar Asistencia</h3>
+                    <p class="text-[11px] text-zinc-300 font-sans">Favor de confirmar tu presencia para este día tan especial</p>
+                </div>
+
+                <form id="page5RsvpForm" onsubmit="handlePage5RsvpSubmit(event)" class="space-y-3">
+                    <div>
+                        <label class="block text-[11px] font-serif uppercase tracking-wider text-red-300 mb-1">Nombre Completo</label>
+                        <input type="text" id="p5-name" required placeholder="Tu nombre y apellido" class="w-full bg-zinc-900/90 border border-red-500/40 rounded-lg px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-red-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-serif uppercase tracking-wider text-red-300 mb-1">Número de Acompañantes</label>
+                        <select id="p5-guests" class="w-full bg-zinc-900/90 border border-red-500/40 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-red-500">
+                            <option value="1 persona">Solo yo (1 persona)</option>
+                            <option value="2 personas">2 personas</option>
+                            <option value="3 personas">3 personas</option>
+                            <option value="Familia (4+ personas)">Familia (4+ personas)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-serif uppercase tracking-wider text-red-300 mb-1">Mensaje para Angeli</label>
+                        <textarea id="p5-msg" rows="2" placeholder="Escribe unas palabras de felicitación..." class="w-full bg-zinc-900/90 border border-red-500/40 rounded-lg px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-red-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-red-700 to-red-600 hover:from-red-600 hover:to-red-500 text-white font-serif font-bold text-xs shadow-lg transition-all flex items-center justify-center space-x-2 glow-btn">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <span>Confirmar por WhatsApp</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- PAGE 6 SECTION -->
+        <section id="section-6" class="snap-section" data-page-num="6">
+            <img 
+                src="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth%20(7).jpg" 
+                onerror="this.onerror=null; this.src='https://github.com/regina1503/MIS-XV-ANGELI-ELIZABETH/raw/main/Angeli%20Elizabeth%20(7).jpg';"
+                alt="Página 6 - Mis XV Angeli Elizabeth" 
+                class="full-page-img"
+            />
+        </section>
+
+        <!-- PAGE 7 SECTION -->
+        <section id="section-7" class="snap-section" data-page-num="7">
+            <img 
+                src="https://raw.githubusercontent.com/regina1503/MIS-XV-ANGELI-ELIZABETH/main/Angeli%20Elizabeth%20(9).jpg" 
+                onerror="this.onerror=null; this.src='https://github.com/regina1503/MIS-XV-ANGELI-ELIZABETH/raw/main/Angeli%20Elizabeth%20(9).jpg';"
+                alt="Página 7 - Mis XV Angeli Elizabeth" 
+                class="full-page-img"
+            />
+
+            <!-- CUENTA REGRESIVA EN LA ÚLTIMA PÁGINA (BAJADA UN 8% MÁS AL 26%) -->
+            <div class="absolute top-[26%] left-1/2 -translate-x-1/2 z-30 w-full max-w-sm px-4 text-center pointer-events-none">
+                <p class="font-serif text-xs sm:text-sm uppercase tracking-widest text-red-500 font-semibold mb-3 drop-shadow-md">Faltan</p>
+                <div class="grid grid-cols-4 gap-2 sm:gap-4 text-red-600 font-serif font-bold">
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-red-600/80 bg-black/60 backdrop-blur-sm flex items-center justify-center shadow-lg mb-1">
+                            <span id="timer-days" class="text-xl sm:text-2xl text-red-500 font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">00</span>
+                        </div>
+                        <span class="text-[10px] text-red-400 font-sans uppercase tracking-wider font-semibold">Días</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-red-600/80 bg-black/60 backdrop-blur-sm flex items-center justify-center shadow-lg mb-1">
+                            <span id="timer-hours" class="text-xl sm:text-2xl text-red-500 font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">00</span>
+                        </div>
+                        <span class="text-[10px] text-red-400 font-sans uppercase tracking-wider font-semibold">Horas</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-red-600/80 bg-black/60 backdrop-blur-sm flex items-center justify-center shadow-lg mb-1">
+                            <span id="timer-minutes" class="text-xl sm:text-2xl text-red-500 font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">00</span>
+                        </div>
+                        <span class="text-[10px] text-red-400 font-sans uppercase tracking-wider font-semibold">Min</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-red-600/80 bg-black/60 backdrop-blur-sm flex items-center justify-center shadow-lg mb-1">
+                            <span id="timer-seconds" class="text-xl sm:text-2xl text-red-500 font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">00</span>
+                        </div>
+                        <span class="text-[10px] text-red-400 font-sans uppercase tracking-wider font-semibold">Seg</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- LIGHTBOX / FULLSCREEN IMAGE MODAL -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex items-center justify-center p-2">
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-zinc-800/80 text-amber-200 flex items-center justify-center hover:bg-rose-900 border border-goldAccent/40 z-10">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        <div class="w-full h-full flex items-center justify-center">
+            <img id="lightboxImg" src="" alt="Vista ampliada" class="max-w-full max-h-full object-contain rounded-lg">
+        </div>
+    </div>
+
+    <!-- RSVP CONFIRMATION MODAL -->
+    <div id="rsvpModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="w-full max-w-md bg-zinc-950 border border-goldAccent/50 rounded-2xl card-shadow p-6 text-amber-100 relative">
+            <button onclick="closeRsvpModal()" class="absolute top-4 right-4 text-amber-200/60 hover:text-roseGold">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <i class="fa-solid fa-wine-glass-empty text-3xl text-goldAccent mb-2"></i>
+                <h3 class="font-serif text-2xl text-roseGold font-bold">Confirmar Asistencia</h3>
+                <p class="text-xs text-amber-200/70 font-sans mt-1">Angeli Elizabeth espera contar con tu presencia en este día tan especial.</p>
+            </div>
+
+            <form id="rsvpForm" onsubmit="handleRsvpSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-serif uppercase tracking-wider text-amber-200/90 mb-1">Nombre Completo</label>
+                    <input type="text" required placeholder="Tu nombre y apellido" class="w-full bg-zinc-900 border border-goldAccent/30 rounded-lg px-3 py-2.5 text-sm text-amber-100 placeholder-zinc-500 focus:outline-none focus:border-goldAccent">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-serif uppercase tracking-wider text-amber-200/90 mb-1">Número de Acompañantes</label>
+                    <select class="w-full bg-zinc-900 border border-goldAccent/30 rounded-lg px-3 py-2.5 text-sm text-amber-100 focus:outline-none focus:border-goldAccent">
+                        <option value="1">Solo yo (1 persona)</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">Familia (4+ personas)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-serif uppercase tracking-wider text-amber-200/90 mb-1">Mensaje para Angeli</label>
+                    <textarea rows="3" placeholder="Escribe unas palabras de felicitación..." class="w-full bg-zinc-900 border border-goldAccent/30 rounded-lg px-3 py-2.5 text-sm text-amber-100 placeholder-zinc-500 focus:outline-none focus:border-goldAccent"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-roseGold to-goldAccent text-zinc-950 font-serif font-bold text-sm shadow-lg hover:opacity-95 transition-all">
+                    Enviar Confirmación por WhatsApp
+                </button>
+            </form>
+
+            <div id="rsvpSuccessMsg" class="hidden text-center py-6 space-y-3">
+                <i class="fa-solid fa-circle-check text-4xl text-emerald-400"></i>
+                <h4 class="font-serif text-xl text-amber-100 font-bold">¡Gracias por confirmar!</h4>
+                <p class="text-xs text-zinc-300">Hemos preparado tu mensaje de confirmación.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOM TOAST NOTIFICATION BOX -->
+    <div id="toastBox" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-zinc-900 border border-red-600/60 text-white text-xs sm:text-sm font-serif px-6 py-3 rounded-full shadow-2xl opacity-0 transition-all duration-300 pointer-events-none flex items-center space-x-2">
+        <i id="toastIcon" class="fa-solid fa-check text-red-500"></i>
+        <span id="toastText">Enlace copiado al portapapeles</span>
+    </div>
+
+    <script>
+        let audioContext = null;
+        let isPlayingAudio = false;
+        let progressInterval = null;
+        let currentProgress = 0;
+
+        window.onload = function() {
+            initSparkles();
+            setupIntersectionObserver();
+            initCountdown();
+        };
+
+        // Scroll smooth to specific page section
+        function scrollToPage(pageNum) {
+            const section = document.getElementById('section-' + pageNum);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Cuenta regresiva sin fondo
+        function initCountdown() {
+            // Fecha objetivo por defecto (se puede ajustar según la fecha exacta de los XV)
+            const targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 30); // 30 días en el futuro como ejemplo
+
+            function updateTimer() {
+                const now = new Date().getTime();
+                const difference = targetDate.getTime() - now;
+
+                if (difference > 0) {
+                    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                    document.getElementById('timer-days').textContent = String(days).padStart(2, '0');
+                    document.getElementById('timer-hours').textContent = String(hours).padStart(2, '0');
+                    document.getElementById('timer-minutes').textContent = String(minutes).padStart(2, '0');
+                    document.getElementById('timer-seconds').textContent = String(seconds).padStart(2, '0');
+                }
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        // Intersection Observer to detect current visible page section on swipe/scroll
+        function setupIntersectionObserver() {
+            const sections = document.querySelectorAll('.snap-section');
+            const dots = document.querySelectorAll('.dot-nav');
+
+            const observerOptions = {
+                root: document.getElementById('snapContainer'),
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const pageNum = entry.target.getAttribute('data-page-num');
+
+                        // Update active side dots
+                        dots.forEach(dot => {
+                            if (dot.getAttribute('data-page') === pageNum) {
+                                dot.className = "dot-nav w-3 h-3 rounded-full bg-red-600 transition-all scale-125 shadow-glow";
+                            } else {
+                                dot.className = "dot-nav w-3 h-3 rounded-full bg-zinc-600 hover:bg-red-500/70 transition-all";
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
+        }
+
+        // Lightbox Zoom Functions
+        function openLightbox(imgSrc) {
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImg');
+            img.src = imgSrc;
+            modal.classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+        }
+
+        // RSVP Modal Functions
+        function openRsvpModal() {
+            document.getElementById('rsvpModal').classList.remove('hidden');
+        }
+
+        // Envío del formulario de la Página 5 a WhatsApp 4448506173
+        function handlePage5RsvpSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('p5-name').value;
+            const guests = document.getElementById('p5-guests').value;
+            const message = document.getElementById('p5-msg').value;
+
+            const whatsappText = `¡Hola Angeli Elizabeth! Confirmo mi asistencia a tus XV Años.\n\n*Nombre:* ${name}\n*Acompañantes:* ${guests}\n*Mensaje:* ${message || '¡Muchas felicidades!'}`;
+            const encoded = encodeURIComponent(whatsappText);
+            
+            showToast("Redirigiendo a WhatsApp...");
+            setTimeout(() => {
+                window.open(`https://wa.me/524448506173?text=${encoded}`, '_blank');
+            }, 500);
+        }
+
+        function closeRsvpModal() {
+            document.getElementById('rsvpModal').classList.add('hidden');
+            document.getElementById('rsvpForm').reset();
+            document.getElementById('rsvpForm').classList.remove('hidden');
+            document.getElementById('rsvpSuccessMsg').classList.add('hidden');
+        }
+
+        function handleRsvpSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const name = form.querySelector('input[type="text"]').value;
+            const guests = form.querySelector('select').value;
+            const message = form.querySelector('textarea').value;
+
+            const whatsappText = `¡Hola Angeli Elizabeth! Confirmo mi asistencia a tus XV Años.\n\n*Nombre:* ${name}\n*Acompañantes:* ${guests}\n*Mensaje:* ${message || '¡Muchas felicidades!'}`;
+            const encoded = encodeURIComponent(whatsappText);
+            
+            document.getElementById('rsvpForm').classList.add('hidden');
+            document.getElementById('rsvpSuccessMsg').classList.remove('hidden');
+
+            setTimeout(() => {
+                window.open(`https://wa.me/?text=${encoded}`, '_blank');
+            }, 1000);
+        }
+
+        // Función para abrir la ubicación en Google Maps
+        function openLocation(type) {
+            // Abre enlace a Google Maps
+            window.open('https://maps.google.com/', '_blank');
+        }
+
+        // Copy Link function
+        function copyInvitationLink() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = window.location.href;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+            showToast("¡Enlace de invitación copiado!");
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toastBox');
+            const toastText = document.getElementById('toastText');
+            toastText.textContent = message;
+            toast.classList.remove('opacity-0', 'pointer-events-none');
+            toast.classList.add('opacity-100');
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'pointer-events-none');
+                toast.classList.remove('opacity-100');
+            }, 3000);
+        }
+
+        // Audio controls
+        function toggleAudio() {
+            const playIcon = document.getElementById('p2PlayIcon');
+            const playBtn = document.getElementById('p2PlayBtn');
+            const equalizer = document.getElementById('equalizer');
+
+            if (isPlayingAudio) {
+                isPlayingAudio = false;
+                if (audioContext) audioContext.suspend();
+                if (playIcon) playIcon.className = "fa-solid fa-play ml-0.5";
+                if (equalizer) equalizer.classList.add('opacity-50');
+                clearInterval(progressInterval);
+                showToast("Música pausada");
+            } else {
+                isPlayingAudio = true;
+                playWaltzSynthesizer();
+                if (playIcon) playIcon.className = "fa-solid fa-pause";
+                if (equalizer) equalizer.classList.remove('opacity-50');
+                startProgressBar();
+                showToast("Reproduciendo Vals ✨");
+            }
+        }
+
+        function startProgressBar() {
+            clearInterval(progressInterval);
+            const progressBar = document.getElementById('audioProgressBar');
+            progressInterval = setInterval(() => {
+                if (!isPlayingAudio) return;
+                currentProgress += 1;
+                if (currentProgress > 100) currentProgress = 0;
+                if (progressBar) progressBar.style.width = currentProgress + '%';
+            }, 300);
+        }
+
+        function playWaltzSynthesizer() {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            } else {
+                audioContext.resume();
+            }
+
+            const notes = [261.63, 329.63, 392.00, 523.25, 440.00, 349.23, 392.00, 329.63];
+            let noteIdx = 0;
+
+            function playNote() {
+                if (!isPlayingAudio) return;
+
+                const osc = audioContext.createOscillator();
+                const gain = audioContext.createGain();
+
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(notes[noteIdx], audioContext.currentTime);
+
+                gain.gain.setValueAtTime(0.08, audioContext.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 1.2);
+
+                osc.connect(gain);
+                gain.connect(audioContext.destination);
+
+                osc.start();
+                osc.stop(audioContext.currentTime + 1.2);
+
+                noteIdx = (noteIdx + 1) % notes.length;
+                setTimeout(playNote, 600);
+            }
+
+            playNote();
+        }
+
+        // Sparkle Particles Effect
+        function initSparkles() {
+            const canvas = document.getElementById('sparkleCanvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            for (let i = 0; i < 40; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 2.5 + 0.5,
+                    alpha: Math.random(),
+                    speedY: Math.random() * 0.4 + 0.1,
+                    speedAlpha: Math.random() * 0.02 + 0.005
+                });
+            }
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                particles.forEach(p => {
+                    p.y -= p.speedY;
+                    p.alpha += p.speedAlpha;
+
+                    if (p.alpha > 1 || p.alpha < 0) p.speedAlpha = -p.speedAlpha;
+                    if (p.y < 0) {
+                        p.y = canvas.height;
+                        p.x = Math.random() * canvas.width;
+                    }
+
+                    ctx.fillStyle = `rgba(220, 38, 38, ${Math.abs(p.alpha) * 0.7})`;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fill();
+                });
+
+                requestAnimationFrame(animateParticles);
+            }
+
+            animateParticles();
+        }
+    </script>
+</body>
+</html>
