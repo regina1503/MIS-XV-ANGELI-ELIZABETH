@@ -476,14 +476,20 @@
             }
         }
 
-        // Cuenta regresiva sin fondo
+        // Cuenta regresiva configurada para el 24 de Octubre
         function initCountdown() {
-            const targetDate = new Date();
-            targetDate.setDate(targetDate.getDate() + 30);
+            const now = new Date();
+            let targetYear = now.getFullYear();
+            
+            // Si el 24 de octubre de este año ya pasó, calcula para el próximo año
+            let targetDate = new Date(targetYear, 9, 24, 16, 0, 0); // 24 de Octubre (mes index 9 = octubre)
+            if (now.getTime() > targetDate.getTime()) {
+                targetDate = new Date(targetYear + 1, 9, 24, 16, 0, 0);
+            }
 
             function updateTimer() {
-                const now = new Date().getTime();
-                const difference = targetDate.getTime() - now;
+                const currentTime = new Date().getTime();
+                const difference = targetDate.getTime() - currentTime;
 
                 if (difference > 0) {
                     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -495,6 +501,11 @@
                     document.getElementById('timer-hours').textContent = String(hours).padStart(2, '0');
                     document.getElementById('timer-minutes').textContent = String(minutes).padStart(2, '0');
                     document.getElementById('timer-seconds').textContent = String(seconds).padStart(2, '0');
+                } else {
+                    document.getElementById('timer-days').textContent = '00';
+                    document.getElementById('timer-hours').textContent = '00';
+                    document.getElementById('timer-minutes').textContent = '00';
+                    document.getElementById('timer-seconds').textContent = '00';
                 }
             }
 
